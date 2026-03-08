@@ -17,7 +17,7 @@ public class HelloController {
 
     @GetMapping("/health")
     public String health() {
-        return "ok";
+        return "NO";
     }
 
     @GetMapping("/info")
