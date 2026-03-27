@@ -1,0 +1,27 @@
+application:
+  yml:
+server:
+  port: 8082
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: springboot-week3 生产环境
+# 自定义应用配置
+app:
+  app-name: 企业后台管理系统  # 修正拼写错误：app-mame -> app-name
+  version: 1.6.5
+  description: 基于 Spring Boot 4.0.4 构建
+  published: true            # 补充缺失的配置项
+  author:
+    name: hongchen
+    website: http://wiwiw.top
+    email: 22222222@qqcom
+  feature:
+    - 基于 Spring Boot 3.5.11 构建
+    - 集成 Spring Security
+    - 集成 Spring Data JPA
+    - 集成 Spring Boot Redis
+
+    # 开启前端页面热刷新（需浏览器插件）
