@@ -1,0 +1,16 @@
+server:
+  port: 8080 # 项目启动端口
+
+spring:
+  datasource:
+    # MySQL8连接地址，替换自己的数据库地址/端口
+    url: jdbc:mysql://localhost:3306/springboot3_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root # 替换自己的MySQL用户名
+    password: 123456 # 替换自己的MySQL密码
+    driver-class-name: com.mysql.cj.jdbc.Driver # MySQL8专用驱动
+
+# MyBatis配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 开启下划线→驼峰自动映射（如create_time→createTime）
+  mapper-locations: classpath:mapper/*.xml # 后续XML映射文件扫描路径（提前配置）

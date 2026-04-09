@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace 必须和你本地 Mapper 接口全类名完全一致 -->
+<mapper namespace="top.hongchen05.week05.mapper.UserMapper">
+    <!-- id = 接口方法名，resultType = 你本地实体类全类名 -->
+    <select id="selectByCondition" resultType="top.hongchen05.week05.entity.User">
+        SELECT * FROM t_user
+        <where>
+            <if test="username != null and username != ''">
+                AND username LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <if test="minAge != null">
+                AND age >= #{minAge}
+            </if>
+        </where>
+    </select>
+</mapper>
