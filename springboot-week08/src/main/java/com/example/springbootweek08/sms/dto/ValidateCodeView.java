@@ -1,0 +1,6 @@
+package com.example.springbootweek08.sms.dto;
+
+public record ValidateCodeView(
+        boolean valid
+) {
+}
